@@ -119,7 +119,7 @@ class TestPointWonBy(object):
     match = Match("Thiem", "Nadal")
 
     def test_point_won_by_Thiem(self):
-        self.match.point_won_by(self.match.player1)
+        self.match.point_won_by(self.match.player1.name)
         assert self.match.player1.game_point == 1
         assert self.match.player2.game_point == 0
         assert self.match.player1.set_point == 0
@@ -128,14 +128,14 @@ class TestPointWonBy(object):
     def test_point_won_by_Thiem_set_point(self):
         self.match.player1.game_point = 3
         self.match.player2.game_point = 2
-        self.match.point_won_by(self.match.player1)
+        self.match.point_won_by(self.match.player1.name)
         assert self.match.player1.game_point == 0
         assert self.match.player2.game_point == 0
         assert self.match.player1.set_point == 1
         assert self.match.player2.set_point == 0
 
     def test_point_won_by_Nadal(self):
-        self.match.point_won_by(self.match.player2)
+        self.match.point_won_by(self.match.player2.name)
         assert self.match.player1.game_point == 0
         assert self.match.player2.game_point == 1
         assert self.match.player1.set_point == 1
@@ -144,7 +144,7 @@ class TestPointWonBy(object):
     def test_point_won_by_Nadal_set_point(self):
         self.match.player1.game_point = 2
         self.match.player2.game_point = 3
-        self.match.point_won_by(self.match.player2)
+        self.match.point_won_by(self.match.player2.name)
         assert self.match.player1.game_point == 0
         assert self.match.player2.game_point == 0
         assert self.match.player1.set_point == 1
@@ -155,7 +155,7 @@ class TestPointWonBy(object):
         self.match.player2.set_point = 6
         self.match.player1.game_point = 2
         self.match.player2.game_point = 3
-        self.match.point_won_by(self.match.player2)
+        self.match.point_won_by(self.match.player2.name)
         assert self.match.player1.game_point == 2
         assert self.match.player2.game_point == 4
         assert self.match.player1.set_point == 6
@@ -164,7 +164,7 @@ class TestPointWonBy(object):
     def test_point_won_by_Nadal_tie_break_set_point(self):
         self.match.player1.game_point = 5
         self.match.player2.game_point = 6
-        self.match.point_won_by(self.match.player2)
+        self.match.point_won_by(self.match.player2.name)
         assert self.match.player1.game_point == 0
         assert self.match.player2.game_point == 0
         assert self.match.player1.set_point == 6

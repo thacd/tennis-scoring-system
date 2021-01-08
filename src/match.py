@@ -24,10 +24,10 @@ class Match:
         return "{0}-{1}{2}".format(
             self.player1.set_point, self.player2.set_point, game_score)
 
-    def point_won_by(self, player):
-        if player is self.player1:
+    def point_won_by(self, player_name):
+        if player_name == self.player1.name:
             self.__adjust_point(self.player1)
-        else:
+        if player_name == self.player2.name:
             self.__adjust_point(self.player2)
 
     def __adjust_point(self, player):
