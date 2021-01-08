@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/thacd/tennis-scoring-system.svg?branch=main)](https://travis-ci.com/thacd/tennis-scoring-system) [![codecov](https://codecov.io/gh/thacd/tennis-scoring-system/branch/main/graph/badge.svg?token=7FNJW1XOF7)](https://codecov.io/gh/thacd/tennis-scoring-system)
 
-This is the implementation for the Tennis score system (https://en.wikipedia.org/wiki/Tennis_scoring_system) in Python.
+This is the implementation for the tennis score system (https://en.wikipedia.org/wiki/Tennis_scoring_system) in Python.
 
 Description:
 The scoring system for tennis works like this.
