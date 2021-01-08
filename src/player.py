@@ -6,20 +6,20 @@ class Player:
 
     @property
     def set_point(self):
-        return self._set_point
+        return self.__set_point
 
     @set_point.setter
     def set_point(self, value):
         if value < 0:
             raise ValueError("Negative set point is impossible!")
-        self._set_point = value
+        self.__set_point = value
 
     @property
     def game_point(self):
-        return self._game_point
+        return self.__game_point
 
     @game_point.setter
     def game_point(self, value):
         if value < 0:
             raise ValueError("Negative game point is impossible!")
-        self._game_point = value
+        self.__game_point = value
