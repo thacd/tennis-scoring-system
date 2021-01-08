@@ -55,7 +55,7 @@ For example:
   // this will return "0-0, Advantage Thiem"
   match.score()
   
-  match.pointWonBy("Thiem")
+  match.point_won_by("Thiem")
   // this will return "1-0"
   match.score()
  
