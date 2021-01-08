@@ -35,28 +35,28 @@ Constraints
 For example:
 
 ```
-  match = Match("Thiem", "Nadal");
-  match.point_won_by("Thiem");
-  match.point_won_by("Nadal");
+  match = Match("Thiem", "Nadal")
+  match.point_won_by("Thiem")
+  match.point_won_by("Nadal")
   // this will return "0-0, 15-15"
-  match.score();
+  match.score()
 
-  match.point_won_by("Thiem");
-  match.point_won_by("Thiem");
+  match.point_won_by("Thiem")
+  match.point_won_by("Thiem")
   // this will return "0-0, 40-15"
-  match.score();
+  match.score()
   
-  match.point_won_by("Nadal");
-  match.point_won_by("Nadal");
+  match.point_won_by("Nadal")
+  match.point_won_by("Nadal")
   // this will return "0-0, Deuce"
-  match.score();
+  match.score()
   
-  match.point_won_by("Thiem");
+  match.point_won_by("Thiem")
   // this will return "0-0, Advantage Thiem"
-  match.score();
+  match.score()
   
-  match.pointWonBy("Thiem");
+  match.pointWonBy("Thiem")
   // this will return "1-0"
-  match.score();
+  match.score()
  
 ```
